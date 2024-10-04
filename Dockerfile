@@ -9,9 +9,9 @@ ENV MAPCHOOSER="https://forums.alliedmods.net/attachment.php?attachmentid=110564
 RUN apt-get update && apt-get install -y unzip
 
 # Copy sourcemod.tar.gz, metamod.tar.gz & mapchooser.zip to /tmp
-COPY sourcemod.tar.gz /tmp
-COPY metamod.tar.gz /tmp
-COPY mapchooser.zip /tmp
+COPY /bin/sourcemod.tar.gz /tmp
+COPY /bin/metamod.tar.gz /tmp
+COPY /bin/mapchooser.zip /tmp
 
 # Install Metamod by copying addons folder to /server/cstrike
 RUN tar -xzf /tmp/metamod.tar.gz -C /server/cstrike
